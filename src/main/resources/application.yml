@@ -1,0 +1,25 @@
+server:
+  port: 8069
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: user-service
+          uri: https://smarth-user-service.azurewebsites.net/
+          predicates:
+            - Path=/user-service/**
+
+        - id: result-service
+          uri: https://smarth-resultado-service.azurewebsites.net/
+          predicates:
+            - Path=/resultado/**
+
+        - id: validation-service
+          uri: http://localhost:8004
+          predicates:
+            - Path=/valoracion/**
+
+
+
+
