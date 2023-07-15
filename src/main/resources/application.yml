@@ -11,7 +11,7 @@ spring:
             - Path=/user-service/**
 
         - id: result-service
-          uri: https://smarth-resultado-service.azurewebsites.net/
+          uri: https://smart-resultados.azurewebsites.net/
           predicates:
             - Path=/resultado/**
 
